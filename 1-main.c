@@ -12,8 +12,10 @@ int main(void)
     size_t n = sizeof(array) / sizeof(array[0]);
 
 	list = create_listint(array, n);
+
 	if (!list)
 		return (1);
+		
 	print_list(list);
 	printf("\n");
 	insertion_sort_list(&list);
