@@ -1,29 +1,6 @@
 #include "sort.h"
 
 /**
- * quick_sort - Function that sorts an array based on
- * quick sort algorithm
- * @array: Array to be sorted
- * @size: Size of array
- * Return: 0
- */
-void quick_sort(int *array, size_t size)
-{
-	size_t pivot;
-
-	if (!array || size < 2)
-		return;
-
-	print_sort(array, size, 1);
-
-	pivot = partition(array, size);
-
-	quick_sort(array, pivot);
-
-	quick_sort(array + pivot, size - pivot);
-}
-
-/**
  * swap - Function that swaps two values
  *
  * @a: Fisrt value
@@ -97,3 +74,27 @@ void print_sort(int array[], size_t size, int init)
 	if (!init)
 		print_array(p, s);
 }
+
+/**
+ * quick_sort - Function that sorts an array based on
+ * quick sort algorithm
+ * @array: Array to be sorted
+ * @size: Size of array
+ * Return: 0
+ */
+void quick_sort(int *array, size_t size)
+{
+	size_t pivot;
+
+	if (!array || size < 2)
+		return;
+
+	print_sort(array, size, 1);
+
+	pivot = partition(array, size);
+
+	quick_sort(array, pivot);
+
+	quick_sort(array + pivot, size - pivot);
+}
+
