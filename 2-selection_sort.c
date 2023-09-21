@@ -8,7 +8,7 @@
 void selection_sort(int *array, size_t size)
 {
 	int iterator, tmp, minValue;
-	size_t i, minPosition;
+	size_t i, minPosition = 0;
 
 	iterator = tmp = minValue = 0;
 
